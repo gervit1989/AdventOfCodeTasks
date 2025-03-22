@@ -88,5 +88,5 @@ def part1_of_task(arg_name: str, num_rule:int):
 
 
 file_name = 'input.txt'
-#part1_of_task(file_name, 1)
+part1_of_task(file_name, 1)
 part1_of_task(file_name, 2)
