@@ -54,7 +54,3 @@ def get_session_cookie() -> str:
         raise AocDownloadException(
             f"Key {SESSION_KEY} not present in this environment. Make sure you set it either as an env variable or through a .env file."
         )
-
-import requests
-xs = download_input(2015,8)
-print(xs)

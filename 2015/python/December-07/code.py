@@ -1,7 +1,4 @@
 # чтение данных
-from operator import rshift
-
-
 def read_data(file_name: str):
     in_data = None
     with open(file_name, 'r') as fin:
