@@ -54,3 +54,10 @@ def get_session_cookie() -> str:
         raise AocDownloadException(
             f"Key {SESSION_KEY} not present in this environment. Make sure you set it either as an env variable or through a .env file."
         )
+
+# чтение данных
+def read_data_from_file(file_name):
+    in_data = None
+    with open(file_name, 'r') as fin:
+        in_data = [row.strip() for row in fin.readlines()]
+    return in_data
