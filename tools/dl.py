@@ -61,3 +61,12 @@ def read_data_from_file(file_name):
     with open(file_name, 'r') as fin:
         in_data = [row.strip() for row in fin.readlines()]
     return in_data
+
+
+# чтение данных
+def read_data_from_serv(year:int,day: int):
+    in_str = download_input(year, day)
+    in_data = in_str.split('\n')
+    for i in range(len(in_data)):
+        in_data[i] = in_data[i].strip()
+    return in_data
