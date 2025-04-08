@@ -273,5 +273,5 @@ in_put = read_data_from_serv(2015, 13)
 #in_put = read_data_from_file('in.txt')
 
 # вычисление
-#calc_ans(in_put, 10)
+calc_ans(in_put, 10)
 calc_ans(in_put, 11)
