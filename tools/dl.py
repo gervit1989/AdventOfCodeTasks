@@ -10,6 +10,11 @@ NOT_LOGGED_IN_TEXT = (
 USER_AGENT_HEADER_BODY = "https://github.com/H-Rusch/AdventOfCode-Python contact @ https://github.com/H-Rusch/AdventOfCode-Python/issues/new"
 
 
+def is_empty(row: str = '') -> bool:
+    if len(row) == 0 or row == '':
+        return True
+    return False
+
 class AocDownloadException(Exception):
     def __init__(self, message: str):
         self.message = message
@@ -47,7 +52,7 @@ def build_headers() -> dict:
 def get_session_cookie() -> str:
     load_dotenv()
 
-    return '53616c7465645f5f0a38d42dee6f79faba07b0f17f7c53e70ee64bcd71a75a8c0e4d8b23669793339d1ab69442737121761eccc86d74e470ab5699bcad63c79f'
+    return '53616c7465645f5f5ecdcf36c7bfaf0e3c58cdc6406381365bb07f18266d95c6e8269b5de107d2d03bcff0a3e24a01ad42c2187e579588b7fd8276f822a6142b'
     if SESSION_KEY in os.environ:
         return os.environ[SESSION_KEY]
     else:
